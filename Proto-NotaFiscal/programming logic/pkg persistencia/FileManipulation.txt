@@ -1,0 +1,45 @@
+
+
+define class FM {
+	define getPass() {
+		define reader;
+		encryptedHashedPass = reader.readLine(stateFile);
+		hashedPass = decrypt(encryptedHashedPass);
+		return hashedPass;
+	}
+	
+	define insertPass(plaintextPass) {
+		define inserter;
+		encryptedHashedPass = encrypt(hash(plaintextPass));
+		insertIntoFile(encryptedHashedPass,stateFile);
+	}
+	
+	define getAndDecryptFile(File) {
+		define reader;
+
+		imageBits = decrypt(reader.readLine(File));
+		description = decrypt(reader.readLine(File));
+		
+		info = imageBits + "-" + description;
+		
+		return info;
+	}
+	
+	define encryptAndImageInto(File, imageBits) {
+		define inserter;
+		encryptedImageBits = encrypt(imageBits);
+		insertIntoFile(encryptedImageBits,File)
+		insertIntoFile("-",File)
+	}
+	
+	define encryptAndTextInto(File, text) {
+		define inserter;
+		encryptedText = encrypt(text);
+		insertIntoFile(encryptedText,File);
+	}
+	
+	define deleteFile(file) {
+		remove(appFolder/instanceFolder/+ "file");
+	}
+	
+}

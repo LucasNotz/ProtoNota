@@ -1,0 +1,13 @@
+
+define class {
+	
+	private string programKey = "xyz";
+	
+	define encrypt(input) {
+		return AES.encrypt(input,key);
+	}
+	
+	define decrypt(input) {
+		return AES.decrypt(input, key)
+	}
+}

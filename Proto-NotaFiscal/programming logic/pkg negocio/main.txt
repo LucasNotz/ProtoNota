@@ -1,0 +1,20 @@
+
+		
+define Main class{
+	define main {
+	
+		if app folder not exists{
+			create appFolder;
+			create instanceFolder;
+			
+			create stateFile in appFolder;
+			open LoginTela2;
+		} else {
+			if stateFile exists {
+				open TelaLogin1;
+			} else {
+			create stateFile in appFolder;
+			open LoginTela2;
+		}
+	}
+}
