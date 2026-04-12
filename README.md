@@ -22,6 +22,7 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
 
 ## ⚠️ Considerações Importantes
 
+- Este programa foi projetado apenas para sistemas Linux
 - Este projeto está em **fase de protótipo**.
 - Os mecanismos de segurança **não foram totalmente testados ou auditados**.
 - O uso é por conta e risco do usuário — **não é recomendado para produção**.
@@ -31,7 +32,8 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
 ## 🚀 Como Executar
 
 1. Certifique-se de ter o **Java** instalado.
-2. Execute o arquivo `.jar`:
+2. Tornar o .jar executável
+3. Execute o arquivo `.jar`:
 
    ```bash
    java -jar ProtoNota.jar
