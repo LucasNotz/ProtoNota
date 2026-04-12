@@ -43,7 +43,7 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
 ## 🐛 Problemas Conhecidos (& Exploit)
 
 - Arquivo StateFile.txt deletado
-  1. Crie um novo arquivo `StateFile.txt no mesmo local
+  1. Crie um novo arquivo `StateFile.txt` no mesmo local
   2. Gere um hash SHA-256 da senha que voce deseja
   3. Insira o hash no arquivo e salve
   4. Rode o programa novamente 
