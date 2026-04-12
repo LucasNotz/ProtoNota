@@ -1,8 +1,0 @@
-
-
-define class {
-
-	define encrypt(input) {
-		return SHA2.hash(input);
-	}
-}
