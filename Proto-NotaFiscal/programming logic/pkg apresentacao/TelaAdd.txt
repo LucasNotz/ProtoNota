@@ -1,0 +1,34 @@
+
+define public class ClassName {
+	label titleLabel;
+	textfield title;
+	button chooseImage;
+	label descriptionLabel;
+	textfield description;
+	button add;
+	
+	define gui fucntion {
+		set frame parameters and conditions;
+		
+		set and place titleLabel;
+		set and place title;
+		set and place chooseImage;
+		set and place descriptionLabel;
+		set and place description;
+		set and place add;
+	
+		add.actionListener (
+			when clicked {
+				datacheck title;
+				datacheck chooseImage;
+				datacheck description;
+				
+				if all ok {
+					create file in appFolder/instanceFolder called title;
+					encryptAndImageInto(title,chooseImage.toBits);
+					encryptAndTextInto(title,description);
+					close this.
+				}
+			}
+		)
+	}
