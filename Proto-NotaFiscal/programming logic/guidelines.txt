@@ -1,0 +1,11 @@
+Descrição de alguns comportamentos do programa:
+
+- Armazenamento de informações: Folder encapsulador -> stateFile.txt e Instance Folder
+	- Folder enapsulador define o local em que o programa fica armazenado
+	- stateFile.txt armazena a senha do usuário (hash criptografado)
+	- Instance Folder armazena as informações das notas, tambem criptografadas, em arquivos .txt
+	
+- Organização do programa: Ela é feita em 3 packages
+	- Apresentação = O que o usuário ver
+	- Negócio = Processamento de dados (modificação) + main
+	- Persistência = Armazenamento de dados

@@ -1,0 +1,32 @@
+import
+
+define class {
+	list list;
+	dlm dlm;
+	scrollbar srcb;
+	button new;
+	+configurations que nao lembro do java
+	
+	define gui() {
+		set frame parameters and conditions;
+		
+		configure gui objects (dont remember specifics);
+		
+		loop through appFolder/instanceFiles {
+			display File.getName();
+		}
+		
+		new.action listener(
+			when button = clicked {
+				open TelaAdd;
+			}
+		)
+
+		list.click listener (
+			when list.option = double click {
+				fileName = clickOption.getText();
+				open TelaSave-Delete(fileName);
+			}
+		)
+	}
+}

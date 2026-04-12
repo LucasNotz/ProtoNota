@@ -1,0 +1,56 @@
+
+define public class ClassName {
+	label titleLabel;
+	textfield title;
+	button chooseImage;
+	label descriptionLabel;
+	textfield description;
+	button save;
+	button delete;
+	
+	define gui fucntion(fileName) {
+		set frame parameters and conditions;
+		
+		set and place titleLabel;
+		set and place title;
+		set and place chooseImage;
+		set and place descriptionLabel;
+		set and place description;
+		set and place save;
+		set and place delete;
+		
+		fileInfo = getAndDecryptFile(fileName)
+		title.set(filename - "txt");
+		image = fileInfo[before "-"].toImage
+		descriptioninfo = fileInfo[after "-"]
+		chooseImage.set(image)
+		description.set(descriptioninfo)
+		
+		
+	
+		delete.actionListener (
+			when clicked {
+				ask again(double check);
+				if ok {
+					deleteFile(file);
+					close this;
+				}
+			}
+		)
+		
+		save.actionListener (
+			when clicked {
+				datacheck title;
+				datacheck chooseImage;
+				datacheck description;
+				
+				if all ok {
+					delete file in appFolder/instanceFolder called title;
+					create file in appFolder/instanceFolder called title;
+					encryptAndImageInto(title,chooseImage.toBits);
+					encryptAndTextInto(title,description);
+					close this;
+				}
+			}
+		)
+	}
