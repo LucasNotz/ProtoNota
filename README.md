@@ -26,6 +26,7 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
 - Este projeto está em **fase de protótipo**.
 - Os mecanismos de segurança **não foram totalmente testados ou auditados**.
 - O uso é por conta e risco do usuário — **não é recomendado para produção**.
+- Versão de Java: JavaSE-21
 
 ---
 
