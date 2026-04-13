@@ -34,10 +34,7 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
 
 1. Certifique-se de ter o **Java** instalado.
 2. Tornar o `.jar` executável
-3. Execute o arquivo `.jar`:
-
-   ```bash
-   java -jar ProtoNota.jar
+3. Double click no arquivo
 
 ---
 
