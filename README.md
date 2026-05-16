@@ -17,13 +17,15 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
 
 - 🔒 **Criptografia de Dados**  
   Informações sensíveis são armazenadas de forma criptografada.
-
+  
+- 📧 **Consulta de CEP**  
+ Durante a visualização de seus arquivos, existe a possibilidade de verificar as informações referentes a um CEP inserido
 ---
 
 ## ⚠️ Considerações Importantes
 
 - Este programa foi projetado apenas para sistemas Linux
-- Este projeto está em **fase de protótipo**.
+- Este projeto está em **fase de desenvolvimento**, possuindo versões funioncionais disponibilizadas.
 - Os mecanismos de segurança **não foram totalmente testados ou auditados**.
 - O uso é por conta e risco do usuário — **não é recomendado para produção**.
 - Versão de Java: JavaSE-21

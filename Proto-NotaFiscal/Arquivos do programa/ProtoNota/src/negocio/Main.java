@@ -33,11 +33,11 @@ public class Main {
 		String infoSistema = "";
 		
 		//Descobrir diretório para poder criar um folder no lugar correto
-		Process processo = Runtime.getRuntime().exec("pwd");
+		Process processo = Runtime.getRuntime().exec("whoami");
 		infoSistema = printResults(processo);
 		
 		//Definir onde folder deve estar localizado
-		Path caminhoProtoFolder = Paths.get(infoSistema + "/zProtoNotaFolder");
+		Path caminhoProtoFolder = Paths.get("/home/" + infoSistema + "/zProtoNotaFolder");
 		System.out.println("Directory path: " + caminhoProtoFolder);
 		System.out.println();
 		

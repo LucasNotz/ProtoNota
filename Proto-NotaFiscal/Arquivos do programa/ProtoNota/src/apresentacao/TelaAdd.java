@@ -30,6 +30,8 @@ public class TelaAdd extends JFrame{
 	private JTextArea description = new JTextArea();
 	private JButton saveNota = new JButton("Salvar Nota");
 	private JButton cancel = new JButton("Cancelar");
+	private JTextField cepAPIinput = new JTextField();
+	private JButton cepAPIbutton = new JButton("Consultar CEP");
 	
 	private String img64Encrypted = "";
 	private String noteTitle = "";
@@ -37,7 +39,7 @@ public class TelaAdd extends JFrame{
 	
 	public TelaAdd(String mainFolderPath) {
 		setTitle("ProtoNota - Nova Nota");
-		setSize(300, 450);
+		setSize(300, 500);
 		setLayout(null);
 		setResizable(false);
 		setLocationRelativeTo(null);

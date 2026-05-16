@@ -8,14 +8,18 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import negocio.BaseUtil;
+import negocio.CEP;
 import negocio.Encryption;
 import persistencia.FileManipulation;
 
@@ -26,7 +30,13 @@ public class TelaView extends JFrame{
 	private JLabel descriptionLabel = new JLabel("Descrição");
 	private JTextArea description = new JTextArea();
 	private JButton delete = new JButton("Deletar");
-
+	private JTextField cepAPIinput = new JTextField();
+	private JButton cepAPIbutton = new JButton("Consultar CEP");
+	//private JTextArea cepResults = new JTextArea();
+	private JList<String> cepList = new JList<String>();
+	private JScrollPane cepScroll = new JScrollPane(cepList);
+	private DefaultListModel<String> dlm = new DefaultListModel<String>();
+	
 	
 	private String img64Unencrypted = "";
 	private String noteTitle = "";
@@ -34,7 +44,7 @@ public class TelaView extends JFrame{
 	
 	public TelaView(String mainFolderPath, String fileName) {
 		setTitle("ProtoNota - View Note");
-		setSize(300, 400);
+		setSize(300, 600);
 		setLayout(null);
 		setResizable(false);
 		setLocationRelativeTo(null);
@@ -146,7 +156,32 @@ public class TelaView extends JFrame{
 				}
 			}
 		});
-
 		
+		cepAPIinput.setBounds(10,370,200,25);
+		add(cepAPIinput);
+		
+		cepAPIbutton.setBounds(10,400,200,25);
+		add(cepAPIbutton);
+		
+		cepAPIbutton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					dlm.clear();
+					String dados = CEP.getCEP(cepAPIinput.getText());
+					String[] dadosProcessados = CEP.seperateJSONby(dados, ',', 10);
+					for (String i : dadosProcessados) {
+						dlm.addElement(i);
+					}
+					cepList.setModel(dlm);
+					cepScroll.setBounds(10, 440, 280,100);
+					add(cepScroll);
+					System.out.println(dadosProcessados[1]);
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}				
+			}
+		});
 	}
 }
