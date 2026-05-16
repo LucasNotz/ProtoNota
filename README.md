@@ -49,4 +49,7 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
   1. Crie um novo arquivo `StateFile.txt` no mesmo local
   2. Gere um hash SHA-256 da senha que voce deseja
   3. Insira o hash no arquivo e salve
-  4. Rode o programa novamente 
+  4. Rode o programa novamente
+ 
+---
+Claude e Gemini foram utilizados para o deploy do projeto (geração do index.html e instruções para desenvolvedor)
