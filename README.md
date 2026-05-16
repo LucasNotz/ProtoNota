@@ -38,7 +38,8 @@ O ProtoNota funciona como um sistema de armazenamento local para registros finan
 
 1. Certifique-se de ter o **Java** instalado.
 2. Complile o código localmente
-3. Rode o programa
+3. Exporte como .jar
+4. Torne o arquivo executável
 
 ---
 
